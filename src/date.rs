@@ -47,6 +47,7 @@ pub fn retrieve_hour_minute(date: DateTime<Local>) -> String {
     let (gogo, mut hour) = date.hour12();
     hour %= 12;
     let minute = date.minute();
+    let second = date.second();
     let prefix = if !gogo { "午前" } else { "午後" };
-    format!("{prefix}{hour}時{minute}分")
+    format!("{prefix}{hour}時{minute}分{second}秒")
 }
