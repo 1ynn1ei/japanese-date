@@ -8,7 +8,7 @@ pub fn retrieve_era(date: DateTime<Local>) -> String {
     // more control here with the matching (probably just match utc timestamp)
     match year {
         2019..=i32::MAX => {
-            era_year = year - 2019;
+            era_year = year - 2018;
             era = String::from("令和");
         },
         1989..=2018 => {
